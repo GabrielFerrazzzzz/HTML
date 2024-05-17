@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MODELO EM HTML</title>
+  <!-- Link CSS-->
+  <link rel="stylesheet" href="style2.css" />
+  <!--BootStrap Css-->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"/>
+  <!--BootStrap Js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+  crossorigin="anonymous"></script> 
+  <!-- Font Awesome-->
+  <script src="https://kit.fontawesome.com/475285a6f6.js" crossorigin="anonymous"></script>
+  <!--Progress Bar-->
+  <script src="progressbar.min.js"></script>
+  <!--Query-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Parallax-->
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+  <!-- Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container" id="nav-container">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <a class="navbar-brand" href="#"
+          ><img id="logo" src="/img-carousel/Logo-Tecsidel1.png" alt="Logo Free-flow">
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-bs-target="#navbar-links"
+          aria-controls="navbar-links"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" id="home-menu">Home</a>
+            <a class="nav-item nav-link" id="cameras-menu">Cameras</a> 
+            <a class="nav-item nav-link" id="pagamentos-menu">Pagamentos</a> 
+            <a class="nav-item nav-link" id="contact-menu">Contatos</a> 
+            <a class="nav-item nav-link" id="contact-menu">Login</a> 
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- Imagens em loop-->
+    <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#mainSlider" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#mainSlider" data-bs-slide-to="1"></li>
+        <li data-bs-target="#mainSlider" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img-carousel/Teste.gif" class="d-block w-100" alt="Primeira imagem">
+          <div class="carousel-caption d-md-block">
+            <h1>Pague sem parar com Free-Flow</h1>
+            <p>Facilitamos sua viagem com pagamento instantâneo via Pix e QR Code.</p>
+            <a href="#" class="main-btn">Pagar</a>
+          </div>
+        </div>       
+        <div class="carousel-item">
+          <img src="/img-carousel/city.png" class="d-block w-100" alt="Segunda imagem">
+          <div class="carousel-caption d-md-block">
+            <h1>Rapidez e Segurança em Pagamentos.</h1>
+            <p>Com o Free-Flow, seu pagamento é rápido e seguro, sem filas ou espera.</p>
+            <a href="#" class="main-btn">Veja suas contas</a>
+          </div>
+        </div>     
+        <div class="carousel-item">
+          <img src="/img-carousel/Banner3.png" class="d-block w-100" alt="Terceira imagem">
+          <div class="carousel-caption d-md-block">
+            <h1>Tecnologia a Serviço da Mobilidade</h1>
+            <p>Utilizamos tecnologia de ponta para reconhecimento automático de veículos e cobrança ágil.</p>
+            <a href="#" class="main-btn">Realize o pagamento</a>
+          </div>
+        </div>   
+      </div>
+      <a href="#mainSlider" class="carousel-control-prev" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="srv-only">Anterior</span>
+      </a>
+      <a href="#mainSlider" class="carousel-control-next" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="srv-only">Próximo</span>
+      </a>
+    </div>
+    <!--Sobre a empresa-->
+    <div id="about-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="main-title">Sobre o Free-Flow</h2>
+          </div>
+          <div class="col-md-6">
+            <img  src="/img-carousel/electronic-toll.png" alt="Free-Flow Tecsidel">
+          </div>
+          <div class="col-md-6">  
+            <h2 class="about-title">O que é o Free-Flow</h2>
+            <p class="about-title-p">
+              O sistema Free-Flow transforma a mobilidade nas estradas permitindo que veículos passem por pontos de cobrança sem paradas. Utilizando tecnologia avançada de reconhecimento de placas e sensores, a cobrança é efetuada de forma automática e precisa.
+            </p>
+            <ul id="about-list">
+              <li><i class="fas fa-check"></i>Pagamentos Via PIX</li>
+              <li><i class="fas fa-check"></i>Pagamentos Via QrCode</li>
+              <li><i class="fas fa-check"></i>Sem precisão de pedágios</li>
+              <li><i class="fas fa-check"></i>Pagamentos Via PIX</li>
+              <li><i class="fas fa-check"></i>Pagamentos Via PIX</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Icones de dados-->
+    <div id="services-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="main-title">Nossas Especialidades</h2>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Aplicativos Mobile</h3>
+            <p>Acesse nossos serviços diretamente do seu smartphone.</p>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Compras Inteligentes</h3>
+            <p>Facilite suas transações e compras com nossa tecnologia integrada</p>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Design e Usabilidade</h3>
+            <p>Interfaces pensadas para uma experiência do usuário fluída e agradável.</p>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fab fa-google"></i>
+            <h3>Aplicativos Nativos</h3>
+            <p>Nas palmas da sua mão</p>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Suporte 24/7</h3>
+            <p>Você sempre terá alguem da equipe disponivel para suporte, em diferentes plataformas (chat, email, skype)</p>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-server"></i>
+            <h3>Aplicativos Nativos</h3>
+            <p>Nas palmas da sua mão</p>
+          </div>
+        </div>
+      </div>
+      <!--Dados da empresa-->
+      <div id="data-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 circle-box">
+              <div id="circleA"></div>
+              <p>Horas Economizadas p/dia</p>
+            </div>
+            <div class="col-md-3 circle-box">
+              <div id="circleB"></div>
+              <p>Contagem de Carros</p>
+            </div>
+            <div class="col-md-3 circle-box">
+              <div id="circleC"></div>
+              <p>Pagamentos Realizados</p>
+            </div>
+            <div class="col-md-3 circle-box">
+              <div id="circleD"></div>
+              <p>Pagamentos Pendentes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Time-->
+      <div id="team-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="main-title">Nosso Time</h2>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="/img-carousel/profile0.jpg" class="card-image-top" alt="Os desenvolvedores do projeto1">
+                <div class="card-body">
+                  <h4 class="card-title">Gabriel</h4>
+                  <p class="card-text">Software Developer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="/img-carousel/profile2.jpg" class="card-image-top" alt="Os desenvolvedores do projeto2">
+                <div class="card-body">
+                  <h4 class="card-title">Diego</h4>
+                  <p class="card-text">Software Developer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="/img-carousel/profile1.jpg" class="card-image-top" alt="Os desenvolvedores do projeto3">
+                <div class="card-body">
+                  <h4 class="card-title">Danilo</h4>
+                  <p class="card-text">Software Developer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="/img-carousel/profile3.jpg" class="card-image-top" alt="Os desenvolvedores do projeto4">
+                <div class="card-body">
+                  <h4 class="card-title">Jonas</h4>
+                  <p class="card-text">Software Developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Trabalhe conosco-->
+      <div id="apply-area">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 apply-box" id="company-img"></div>
+            <div class="col-md-6 apply-box" id="pattern-img">
+              <h3>Faça Parte de Nossa Equipe!</h3>
+              <p>Procuramos talentos motivados para inovar no mundo da tecnologia de transporte. Venha desafiar os limites com soluções criativas e eficazes em um ambiente dinâmico e colaborativo.</p>
+              <a href="#" class="main-btn" id="apply-btn">Pague Já</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--Rodapé-->
+  <footer>
+    <div id="contact-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="main-title">Contate nosso suporte</h2>
+          </div>
+          <div class="col-md-4 contact-box">
+            <i class="fas fa-phone"></i>
+            <p><span class="contact-title">Ligue para: </span> (11) 99999-9999</p>
+            <p><span class="contact-title">Horários: </span> 08:00 - 19:00</p>
+          </div>
+          <div class="col-md-4 contact-box">
+            <i class="fas fa-envelope"></i>
+            <p><span class="contact-title">Envie um e-mail: </span> suporte@tecsidel.com.br</p>
+          </div>
+          <div class="col-md-4 contact-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <p><span class="contact-title">Localização: </span> Av. Fagundes Filho, 141 - Vila Monte Alegre, São Paulo - SP, 04304-010</p>
+          </div>
+          <div class="col-md-6" id="msg-box">
+            <p>Nos deixe um feedback ou entre em contato através dos nossos canais para suporte e informações.</p>
+            <img src="/img-carousel/conect.png" class="footer-img" alt="Imagem de uma figura do suporte">
+          </div>
+          <div class="col-md-6" id="contact-form">
+            <form action="">
+              <input type="email" class="form-control" placeholder="E-mail" name="email">
+              <input type="text" class="form-control" placeholder="Assunto" name="subject">
+              <textarea class="form-control" rows="3" placeholder="Sua Mensagem..." name="message"></textarea>
+              <input type="submit" class="main-btn" value="Enviar">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="copy-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Desenvolvido por <a href="https://www.linkedin.com/in/gabriel-ferraz-41a1b2175/">TecSidel</a>&copy;2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--Link Js-->
+  <script src="./index.js"></script>
+</body>
+</html>
