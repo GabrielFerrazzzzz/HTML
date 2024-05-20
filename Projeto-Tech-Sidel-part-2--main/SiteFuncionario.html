@@ -32,7 +32,7 @@
     <header>
         <div class="container" id="nav-container">
             <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-                <a class="navbar-brand" href="#"><img id="logo" src="/img-carousel/Logo-Tecsidel1.png"
+                <a class="navbar-brand" href="#"><img id="logo" src="/Projeto-Tech-Sidel-part-2--main/img-carousel/Logo-Tecsidel1.png"
                         alt="Logo Free-flow">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#navbar-links"
@@ -41,31 +41,12 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link active" id="home-menu">Home</a>
-                        <a href="#" class="nav-item nav-link" id="cameras-menu">Pagamentos</a>
-                        <a href="#" class="nav-item nav-link" id="pagamentos-menu">Contatos</a>
-                        <a href="#" class="nav-item nav-link" id="contact-menu">Cadastrar-se</a>
-                        <a href="#" class="nav-item nav-link" id="contact-menu">Login</a>
+                        <a href="#" class="nav-item nav-link" id="home-menu">Home</a>
+                        <a href="#" class="nav-item nav-link" id="cameras-menu">Cameras</a>
+                        <a href="#" class="nav-item nav-link" id="pagamentos-menu">Pagamentos</a>
+                        <a href="#" class="nav-item nav-link" id="contact-menu">Contatos</a>
                     </div>
                 </div>
-            </nav>
-            <div class="container" id="nav-container">
-                <nav>
-                    <ul>
-                        <li>
-                        <a href="#" class="logo">
-                            <svg xmlns="" viewBox="0 0 30 30" fill="white" width="20px" height="20px">
-                            <path d="M25.565,9.785c-0.123,0.077-3.051,1.702-3.051,5.305c0.138,4.109,3.695,5.55,3.756,5.55 c-0.061,0.077-0.537,1.963-1.947,3.94C23.204,26.283,21.962,28,20.076,28c-1.794,0-2.438-1.135-4.508-1.135 c-2.223,0-2.852,1.135-4.554,1.135c-1.886,0-3.22-1.809-4.4-3.496c-1.533-2.208-2.836-5.673-2.882-9 c-0.031-1.763,0.307-3.496,1.165-4.968c1.211-2.055,3.373-3.45,5.734-3.496c1.809-0.061,3.419,1.242,4.523,1.242 c1.058,0,3.036-1.242,5.274-1.242C21.394,7.041,23.97,7.332,25.565,9.785z M15.001,6.688c-0.322-1.61,0.567-3.22,1.395-4.247 c1.058-1.242,2.729-2.085,4.17-2.085c0.092,1.61-0.491,3.189-1.533,4.339C18.098,5.937,16.488,6.872,15.001,6.688z" />
-                            </svg>
-                        </a>
-                        </li>
-                        <li><a href="#" class="link">Store</a></li>
-                        <li><a href="#" class="link">Mac</a></li>
-                        <li><a href="#" class="link">iPad</a></li>
-                        <li><a href="#" class="link">iPhone</a></li>
-                        <li><a href="#" class="link">Watch</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </header>
@@ -137,29 +118,75 @@
             </a>
         </div>
         <!--Dados da empresa-->
-        <div id="data-area">
-            <h1>Dados do dia</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 circle-box">
-                        <div id="circleA"></div>
-                        <p>Contagem de Carros</p>
+        <div id="dataCarousel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#dataCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#dataCarousel" data-bs-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <!-- Dados do Dia -->
+                <div class="carousel-item active">
+                    <div id="data-area">
+                        <h1>Dados do dia</h1>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 circle-box">
+                                    <div id="circleA"></div>
+                                    <p>Contagem de Carros</p>
+                                </div>
+                                <div class="col-md-3 circle-box">
+                                    <div id="circleB"></div>
+                                    <p>Pagamentos Realizados</p>
+                                </div>
+                                <div class="col-md-3 circle-box">
+                                    <div id="circleC"></div>
+                                    <p>Pagamentos Pendentes</p>
+                                </div>
+                                <div class="col-md-3 circle-box">
+                                    <div id="circleD"></div>
+                                    <p>Pagamentos Atrasados</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-3 circle-box">
-                        <div id="circleB"></div>
-                        <p>Pagamentos Realizados</p>
-                    </div>
-                    <div class="col-md-3 circle-box">
-                        <div id="circleC"></div>
-                        <p>Pagamentos Pendentes</p>
-                    </div>
-                    <div class="col-md-3 circle-box">
-                        <div id="circleD"></div>
-                        <p>Pagamentos Atrasados</p>
+                </div>
+                <!-- Dados da Hora -->
+                <div class="carousel-item">
+                    <div id="data-area-hourly">
+                        <h1>Dados da hora</h1>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 circle-box">
+                                    <div id="circuloA"></div>
+                                    <p>Contagem de Carros</p>
+                                </div>
+                                <div class="col-md-3 circle-box">
+                                    <div id="circuloB"></div>
+                                    <p>Pagamentos Realizados</p>
+                                </div>
+                                <div class="col-md-3 circle-box">
+                                    <div id="circuloC"></div>
+                                    <p>Pagamentos Pendentes</p>
+                                </div>
+                                <div class="col-md-3 circle-box">
+                                    <div id="circuloD"></div>
+                                    <p>Pagamentos Atrasados</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#dataCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#dataCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
         </div>
+        
     </main>
     <section class="container">
         <section class="card_container">
@@ -207,7 +234,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="main-title">Contate nosso suporte</h2>
+                        <h2 class="main-title">Suporte Interno</h2>
                     </div>
                     <div class="col-md-4 contact-box">
                         <i class="fas fa-phone"></i>
@@ -224,9 +251,8 @@
                             São Paulo - SP, 04304-010</p>
                     </div>
                     <div class="col-md-6" id="msg-box">
-                        <p>Nos deixe um feedback ou entre em contato através dos nossos canais para suporte e
-                            informações.</p>
-                        <img src="/img-carousel/conect.png" class="footer-img" alt="Imagem de uma figura do suporte">
+                        <p>Nos informe o problema que está ocorrendo</p>
+                        <img src="/Projeto-Tech-Sidel-part-2--main/img-carousel/conect.png" class="footer-img" alt="Imagem de uma figura do suporte">
                     </div>
                     <div class="col-md-6" id="contact-form">
                         <form action="">

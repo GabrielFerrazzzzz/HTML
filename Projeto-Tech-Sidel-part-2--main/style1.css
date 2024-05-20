@@ -67,13 +67,29 @@ header,
     transition: all 0.6s ease;
 }
 
-#navbar-links a::before  {
-    bottom: 0;
-    left: 0;
-} 
-#navbar-links a:hover::before {
-    transform: scaleX(1);
+#navbar-links a {
+    position: relative; /* Adiciona posição relativa para o elemento pai */
+    padding-bottom: 2px; /* Adiciona um pouco de espaço na parte inferior para o sublinhado */
 }
+
+#navbar-links a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Ajusta a posição do sublinhado para que fique abaixo do texto */
+    right: 1rem;
+    width: 80%; 
+    height: 2px;
+    background: #efefef;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+}
+
+#navbar-links a:hover::before,
+#navbar-links a.active::before {
+    transform: scaleX(1); /* Expande o sublinhado na interação */
+}
+
 
 #navbar-links a:hover,
 #navbar-links a.active {
@@ -83,6 +99,11 @@ header,
 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 1rem .8rem;
 }
+
+.navbar-nav {
+    padding-bottom: 10px;
+}
+
 
 /*__________________________________________SLIDER______________________________________________________________*/
 
@@ -245,15 +266,15 @@ header,
 
 /* cameras */
 #company-img {
-    background-image: url(/img-carousel/camera1.png);
+    background-image: url(/Projeto-Tech-Sidel-part-2--main/img-carousel/camera1.png);
 }
 
 #company-img2 {
-    background-image: url(/img-carousel/camera2.jpg);
+    background-image: url(/Projeto-Tech-Sidel-part-2--main/img-carousel/camera2.jpg);
 }
 
 #company-img3 {
-    background-image: url(/img-carousel/camera3.webp);
+    background-image: url(/Projeto-Tech-Sidel-part-2--main/img-carousel/camera3.webp);
 }
 
 #pattern-img h3,
@@ -286,6 +307,7 @@ header,
     border-color: #65daf9;
     background-color: #65daf9;
 }
+
 
 /* __________________________________________DADOS (CIRCULO)___________________________________________________________ */
 
@@ -327,6 +349,50 @@ header,
 }
 
 #data-area p {
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+#data-area-hourly .main-title {
+    color: #d8d8d8;
+    font-size: 30px;
+    top: 10px;
+}
+
+#data-area-hourly .main-title::after {
+    content: "";
+    border-bottom: 2px solid #ececec;
+    width: 15%;
+    position: absolute;
+    top: 40px;
+    left: 42.5%;
+}
+
+.circle-box div {
+    padding: 0 90px;
+    bottom: 20px;
+}
+
+.progressbar-text {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+#data-area-hourly h1{
+    text-align: center;
+    color: #fff;
+    padding-top: 50 px;
+}
+
+#data-area-hourly {
+    height: 45vh;
+    background-image: cover;
+    overflow: hidden;
+}
+
+#data-area-hourly p {
     color: #fff;
     text-align: center;
     font-size: 20px;
@@ -485,6 +551,8 @@ header,
     transition: var(--transition);
 }
 
+
+
 /* __________________________________________FOOTER______________________________________________________________ */
 
 #contact-area {
@@ -492,21 +560,14 @@ header,
     background-color: #f2f2f2;
 }
 
+#contact-area .main-title {
+    color: #F1F1F1;
+}
+
 .contact-box {
     padding-bottom: 50px;
     margin-bottom: 50px;
     border-bottom: 1px solid #65daf9;
-}
-
-.contact-box i {
-    color: #444;
-    border: solid 1px #444;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    font-size: 24px;
-    margin-bottom: 20px;
 }
 
 .contact-box p {
@@ -564,4 +625,43 @@ header,
 #copy-area .container a:hover {
     text-decoration: none;
     color: #65daf9;
+}
+
+#contact-area {
+    background-color: #282c34;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.contact-box i {
+    color: #61dafb;
+    border: 2px solid #61dafb;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 2em;
+}
+
+#contact-form input,
+#contact-form textarea {
+    border: 1px solid #61dafb;
+    background-color: #20232a;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+#contact-form .main-btn {
+    background-color: #61dafb;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+#contact-form .main-btn:hover {
+    background-color: transparent;
+    color: #61dafb;
+    border: 1px solid #61dafb;
 }
