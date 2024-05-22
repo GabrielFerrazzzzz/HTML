@@ -12,6 +12,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    
 }
 
 .row {
@@ -19,7 +20,7 @@ body {
 }
 
 .container {
-    padding: 70px 0;
+    padding: 10px 0;
 }
 
 
@@ -251,9 +252,6 @@ header,
     font-size: 15px;
 }
 
-.main-btn:hover {
-    color: #65daf9;
-}
 
 #company-img,
 #company-img2,
@@ -326,11 +324,6 @@ header,
     left: 42.5%;
 }
 
-.circle-box div {
-    padding: 0 90px;
-    bottom: 20px;
-}
-
 .progressbar-text {
     font-weight: bold;
     font-size: 32px;
@@ -339,7 +332,7 @@ header,
 #data-area h1{
     text-align: center;
     color: #fff;
-    padding-top: 50 px;
+    padding-top: 2px;
 }
 
 #data-area {
@@ -348,11 +341,11 @@ header,
     overflow: hidden;
 }
 
-#data-area p {
+#data-area p , #data-area-hourly p {
     color: #fff;
     text-align: center;
     font-size: 20px;
-    
+    padding-top: 60px;
 }
 
 #data-area-hourly .main-title {
@@ -370,9 +363,17 @@ header,
     left: 42.5%;
 }
 
+.circle-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .circle-box div {
-    padding: 0 90px;
-    bottom: 20px;
+    display: ruby-text;
+    height: 100px;
+    margin: 0 10px;
+    line-height: 160px; /* Center align text vertically */
+    font-weight: bold;
 }
 
 .progressbar-text {
@@ -404,7 +405,7 @@ header,
 .card_container {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 40px;
     justify-content: center;
     width: 100%;
     max-width: 90%;
@@ -544,13 +545,13 @@ header,
 
 .card_bx p {
     color: var(--clr);
+    transition: var(--transition);
 }
 
 .card_bx:hover p {
     color: var(--dark-color);
     transition: var(--transition);
 }
-
 
 
 /* __________________________________________FOOTER______________________________________________________________ */
@@ -664,4 +665,253 @@ header,
     background-color: transparent;
     color: #61dafb;
     border: 1px solid #61dafb;
+}
+
+/* Responsividade */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 769px) {
+    .navbar-brand img {
+        width: 150px;
+    }
+    #company-img, #company-img2, #company-img3 {
+        background-size: cover;
+        background-position: center;
+        width: 50%;
+        min-height: 60vh;
+        height: 100%;
+    }
+    #mainSlider .carousel-inner {
+        height: 45vh;
+    }
+
+    #mainSlider .carousel-control-prev, #mainSlider .carousel-control-next {
+    font-size: 0;
+    }
+    .apply-box2 {
+        font-size: 11px;
+    }
+
+    #pattern-img {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .apply-box2 li {
+        color: #d8d8d8; 
+        padding: 4px;
+    }
+        .circle-box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 150px;
+        align-content: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: column-reverse;
+        padding-bottom: 10px;
+    }
+}
+    
+    .circle-box div {
+        width: 100px; /* Adjust width as needed */
+        height: 100px; /* Adjust height as needed */
+        line-height: 100px;
+        padding: 0;
+    }
+    
+    .progressbar-text {
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+
+    .carousel-caption h1 {
+        font-size: 30px;
+    }
+    .carousel-caption p {
+        font-size: 16px;
+    }
+    .main-btn {
+        width: 150px;
+        height: 50px;
+    }
+    .apply-box, .apply-box2 {
+        height: auto;
+    }
+    #data-area, #data-area-hourly {
+        height: auto;
+    }
+
+    .circle-box div{
+        padding: 0;
+    }
+
+    #contact-area {
+        padding: 20px 0;
+    }
+    #contact-form input[type="text"], #contact-form input[type="email"], #contact-form textarea {
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .card_container {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 40px;
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        padding: 0px 0;
+    }
+    .card_bx {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+/* Tablets ----------- */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .container {
+        padding: 0px;
+    }
+    .navbar-brand img {
+        width: 200px;
+    }
+    #mainSlider .carousel-inner {
+        height: 40vh;
+    }
+    .carousel-caption h1 {
+        font-size: 40px;
+    }
+    .carousel-caption p {
+        font-size: 18px;
+    }
+    #mainSlider .carousel-control-prev, #mainSlider .carousel-control-next {
+        text-decoration: none;
+        top: -20px;
+        font-size: 0;
+    }
+    .apply-box2 li {
+        color: #d8d8d8;
+        text-align: left;
+        text-align: center;
+        font-size: 15px;
+        padding: 2px;
+    }
+
+    .main-btn {
+        width: 180px;
+        height: 55px;
+        padding: 6px 12px;
+    }
+    .apply-box, .apply-box2 {
+        height: auto;
+    }
+    #data-area, #data-area-hourly {
+        height: auto;
+    }
+    #data-area p , #data-area-hourly p {
+        padding-top: 50px;
+    }
+
+    .circle-box div {
+        padding: 0px;
+    }
+    #contact-area {
+        padding: 30px 0;
+    }
+    #contact-form input[type="text"], #contact-form input[type="email"], #contact-form textarea {
+        margin-bottom: 12px;
+        border-radius: 5px;
+    }
+    .card_container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .card_bx {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 988px) and (max-width: 1024px) {
+    
+    div.row {
+        --bs-gutter-x: 6.5rem;
+    }
+
+    .container {
+        margin-top: 40px;
+    }
+}
+
+/* Desktops ----------- */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .navbar-brand img {
+        width: 250px;
+    }
+    #mainSlider .carousel-inner {
+        height: 50vh;
+    }
+    .carousel-caption h1 {
+        font-size: 50px;
+    }
+    .carousel-caption p {
+        font-size: 20px;
+    }
+    .main-btn {
+        width: 200px;
+        height: 60px;
+    }
+    .apply-box, .apply-box2 {
+        height: 100vh;
+    }
+    #data-area, #data-area-hourly {
+        height: 45vh;
+    }
+    .circle-box div {
+        width: 100%;
+        line-height: 200px;
+        padding: 0 50px;
+    }
+
+    .circle-box p {
+        margin-top: 50px;
+    }
+
+    .circle-box {
+        display: flex;
+        text-align: center;
+        margin-bottom: 20px;
+        align-items: center;
+        align-content: flex-start;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #contact-area {
+        padding: 50px 0;
+    }
+    #contact-form input[type="text"], #contact-form input[type="email"], #contact-form textarea {
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+    .card_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card_bx {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+    #data-area, #data-area-hourly {
+        height: 42vh;
+    }
 }
